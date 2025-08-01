@@ -26,35 +26,35 @@ services:
       - /run
       - /var/log/pihole
 
-  padd:
-    build: padd
-    network_mode: host
-    labels:
-      io.balena.features.dbus: "1"
-    volumes:
-      - "pihole_config:/etc/pihole:ro"
-    cap_add:
-      - SYS_TTY_CONFIG
-    devices:
-      - /dev/tty0
-      - /dev/tty1
-    tmpfs:
-      - /tmp
-      - /run
+#  padd:
+#    build: padd
+#    network_mode: host
+#    labels:
+#      io.balena.features.dbus: "1"
+#    volumes:
+#      - "pihole_config:/etc/pihole:ro"
+#    cap_add:
+#      - SYS_TTY_CONFIG
+#    devices:
+#      - /dev/tty0
+#      - /dev/tty1
+#    tmpfs:
+#      - /tmp
+#      - /run
 
-  unbound:
-    build: unbound
-    cap_add:
-     - NET_ADMIN
-    ports:
-      - "5053:5053/tcp"
-      - "5053:5053/udp"
+#  unbound:
+#    build: unbound
+#    cap_add:
+#     - NET_ADMIN
+#    ports:
+#      - "5053:5053/tcp"
+#      - "5053:5053/udp"
 
-  # https://github.com/balena-labs-projects/fbcp
-  # https://hub.balena.io/blocks/1792683/fbcp
-  fbcp:
-    image: bh.cr/balenalabs/fbcp/1.0.4
-    privileged: true
+#  # https://github.com/balena-labs-projects/fbcp
+#  # https://hub.balena.io/blocks/1792683/fbcp
+#  fbcp:
+#    image: bh.cr/balenalabs/fbcp/1.0.4
+#    privileged: true
 
   # https://github.com/balenablocks/hostname
   # https://hub.balena.io/blocks/1918776/hostname-rpi
