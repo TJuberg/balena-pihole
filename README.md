@@ -1,5 +1,15 @@
 # balena-pihole
 
+[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/tjuberg/balena-pihole&defaultDeviceType=raspberrypi3)
+
+
+## Forked repo
+
+This is a fork of https://github.com/klutchell/balena-pihole which is what you likely want.
+This repo strips out PADD and Unbound
+
+## Original ReadMe
+
 If you're looking for a way to quickly and easily get up and running with a
 [Pi-hole](https://pi-hole.net/) device for your home network, this is the
 project for you.
